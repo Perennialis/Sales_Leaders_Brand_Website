@@ -1,0 +1,182 @@
+{
+  "theme_and_archetype": {
+    "theme": "Light",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) + Custom Forced Color Requirements",
+    "description": "Premium Executive Sales Leadership Network website mimicking HexaDash admin theme style. Clean white cards, generous spacing, subtle purple accents, and high-contrast professional look."
+  },
+  "colors": {
+    "primary": {
+      "main": "#8231D3",
+      "deep": "#5F27CD",
+      "light": "#EDE7FF"
+    },
+    "background": {
+      "lavender": "#F8F6FF",
+      "section": "#F4F5F7",
+      "white": "#FFFFFF"
+    },
+    "text": {
+      "dark": "#1F1F2E",
+      "grey": "#6C6C80"
+    },
+    "border": {
+      "grey": "#ECECF5"
+    },
+    "forbidden_colors": [
+      "navy",
+      "gold",
+      "dark luxury themes",
+      "teal",
+      "#1B93A4"
+    ]
+  },
+  "typography": {
+    "font_families": {
+      "headings": "Poppins, sans-serif",
+      "body": "Inter, sans-serif"
+    },
+    "rules": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight",
+      "h2": "text-3xl sm:text-4xl font-medium tracking-tight",
+      "h3": "text-2xl sm:text-3xl font-medium",
+      "body": "text-base lg:text-lg text-[#6C6C80] leading-relaxed",
+      "alignment": "Left-align dense content. Center-align hero and section headers if needed for symmetry."
+    }
+  },
+  "spacing_and_layout": {
+    "general": "Generous spacing. Use p-8, p-12, p-16 for container paddings. Sections should use py-20 to py-32 for breathing room.",
+    "cards": "Clean white cards (#FFFFFF) with rounded corners (12px to 18px / rounded-2xl), subtle border (#ECECF5), and soft ambient shadows (shadow-sm).",
+    "grid": "Use bento grid concepts. Mobile-first grid-cols-1, then md:grid-cols-2 or lg:grid-cols-3 for feature/profile cards."
+  },
+  "animations": {
+    "interactions": "Card hover lift (-translate-y-2 + shadow-lg), button hover glow purple (shadow-[0_0_15px_rgba(130,49,211,0.5)]), fade-in on scroll (Framer Motion).",
+    "parallax": "Subtle parallax on hero graphics and abstract purple background elements.",
+    "logos": "Auto-scroll continuous marquee for trusted companies."
+  },
+  "components": {
+    "buttons": "Primary buttons: bg-[#8231D3] text-white hover:bg-[#5F27CD] transition-all rounded-lg px-6 py-3 font-medium. Secondary buttons: bg-white text-[#8231D3] border border-[#8231D3] hover:bg-[#EDE7FF].",
+    "navbar": "Sticky fixed header, z-50, backdrop-blur-xl bg-white/90. Flex layout with logo, desktop links, and hamburger menu for mobile.",
+    "footer": "Background #F4F5F7, py-16, grid layout for links (About, Membership, Events, Careers, Privacy, Contact, LinkedIn)."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use stroke width 1.5 for a premium look, colored in #8231D3 for accents."
+  },
+  "image_urls": {
+    "hero": [
+      {
+        "url": "https://images.unsplash.com/photo-1758520144424-2e04f4ad7f60?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBkaXNjdXNzaW9ufGVufDB8fHx8MTc3NzI4Mjc3MXww&ixlib=rb-4.1.0&q=85",
+        "description": "Business professionals conversing in a modern office hallway.",
+        "category": "hero_background"
+      }
+    ],
+    "leaders": [
+      {
+        "url": "https://images.unsplash.com/photo-1584940120505-117038d90b05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc3NzI4Mjc3MXww&ixlib=rb-4.1.0&q=85",
+        "description": "man in black suit jacket wearing black framed eyeglasses",
+        "category": "leader_profile_1"
+      },
+      {
+        "url": "https://images.pexels.com/photos/7580822/pexels-photo-7580822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Confident woman in business attire smiling",
+        "category": "leader_profile_2"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1659353220482-554773c2f7fa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc3NzI4Mjc3MXww&ixlib=rb-4.1.0&q=85",
+        "description": "a man in a suit with his arms crossed",
+        "category": "leader_profile_3"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1737574821698-862e77f044c1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc3NzI4Mjc3MXww&ixlib=rb-4.1.0&q=85",
+        "description": "A man in a suit sitting at a desk",
+        "category": "leader_profile_4"
+      },
+      {
+        "url": "https://images.pexels.com/photos/7580761/pexels-photo-7580761.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Portrait of a confident businessman holding papers in formal attire",
+        "category": "leader_profile_5"
+      }
+    ],
+    "events": [
+      {
+        "url": "https://images.unsplash.com/photo-1775163560631-6ff15eb2fa1f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBuZXR3b3JraW5nJTIwZXZlbnQlMjBjb25mZXJlbmNlfGVufDB8fHx8MTc3NzI4Mjc3MXww&ixlib=rb-4.1.0&q=85",
+        "description": "People mingling at an indoor event with warm lighting.",
+        "category": "event_card_1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1773828755374-0ee802d9f44b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBuZXR3b3JraW5nJTIwZXZlbnQlMjBjb25mZXJlbmNlfGVufDB8fHx8MTc3NzI4Mjc3MXww&ixlib=rb-4.1.0&q=85",
+        "description": "Speaker presenting to large audience in auditorium",
+        "category": "event_card_2"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1769839271768-aee5469799ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBuZXR3b3JraW5nJTIwZXZlbnQlMjBjb25mZXJlbmNlfGVufDB8fHx8MTc3NzI4Mjc3MXww&ixlib=rb-4.1.0&q=85",
+        "description": "Man in suit speaking at a presentation",
+        "category": "event_card_3"
+      }
+    ],
+    "features_mockups": [
+      {
+        "url": "https://images.unsplash.com/photo-1772112334844-2eed0111e690?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBjb3Jwb3JhdGUlMjBvZmZpY2UlMjBib2FyZHJvb218ZW58MHx8fHwxNzc3MjgyNzcxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Modern conference room with large table and chairs.",
+        "category": "feature_image_1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1758518730083-4c12527b6742?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHRlYW0lMjBkaXNjdXNzaW9ufGVufDB8fHx8MTc3NzI4Mjc3MXww&ixlib=rb-4.1.0&q=85",
+        "description": "Business professionals collaborating in a modern office meeting.",
+        "category": "feature_image_2"
+      },
+      {
+        "url": "https://images.pexels.com/photos/5511124/pexels-photo-5511124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Spacious conference room with a large meeting table, red chairs, and glass walls for natural lighting.",
+        "category": "feature_image_3"
+      }
+    ],
+    "company_logos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+        "description": "Microsoft",
+        "category": "sponsor_logo"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg",
+        "description": "Salesforce",
+        "category": "sponsor_logo"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
+        "description": "Accenture",
+        "category": "sponsor_logo"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg",
+        "description": "TCS",
+        "category": "sponsor_logo"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg",
+        "description": "Infosys",
+        "category": "sponsor_logo"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg",
+        "description": "Wipro",
+        "category": "sponsor_logo"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/HCL_Technologies_logo.svg",
+        "description": "HCL",
+        "category": "sponsor_logo"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "You MUST use HTML-based React components (.jsx) combined with Tailwind CSS for layout. Do not use generic Shadcn components for major layout sections unless heavily customized.",
+    "Implement the EXACT colors defined in the theme (Main Purple: #8231D3, Deep Purple: #5F27CD, etc). Do not use generic tailwind classes like bg-blue-500.",
+    "The Hero section must have floating member cards and metrics, along with subtle Framer Motion parallax.",
+    "Platform Features Showcase should alternate left/right with text and mockup images.",
+    "Create a continuous logo marquee for the Trusted Companies section using framer-motion or CSS keyframes.",
+    "Hover states must be clearly visible: lift cards and add shadow-lg, buttons get a purple glow.",
+    "Make sure every interactive element (button, link, input) has a relevant 'data-testid'.",
+    "Cards MUST have white background (#FFFFFF), rounded corners (rounded-[12px] to rounded-[18px]), and subtle border (#ECECF5)."
+  ]
+}
