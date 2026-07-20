@@ -47,14 +47,14 @@ export default function Hero({ onPrimary, onSecondary }) {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <button
-              onClick={onPrimary}
+            <a
+              href="https://app.revenuechiefs.org/register"
               data-testid="hero-request-invite-btn"
               className="btn-glow inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#8231D3] text-white font-medium hover:bg-[#5F27CD] transition-colors"
             >
               Request Invitation
               <ArrowRight className="w-4 h-4" strokeWidth={2} />
-            </button>
+            </a>
             <button
               onClick={onSecondary}
               data-testid="hero-explore-btn"
