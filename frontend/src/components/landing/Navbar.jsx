@@ -31,12 +31,10 @@ export default function Navbar({ onCta }) {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
-        <a href="#top" data-testid="logo-link" className="flex items-center gap-2.5 group">
-          <span className="w-9 h-9 rounded-xl bg-[#8231D3] grid place-items-center text-white font-bold shadow-[0_8px_20px_-8px_rgba(130,49,211,0.55)]">
-            E
-          </span>
-          <span className="font-semibold text-[#1F1F2E] tracking-tight hidden sm:block">
-            Executive <span className="text-[#8231D3]">Sales</span> Network
+        <a href="#top" data-testid="logo-link" className="flex items-center gap-3 group">
+          <img src={require('../../assets/logo/logo.png')} alt="Revenue Chiefs Logo" className="h-12 w-auto object-contain mix-blend-multiply" />
+          <span className="font-bold text-2xl text-[#1F1F2E] tracking-tight hidden sm:block">
+            Revenue <span className="text-[#8231D3]">Chiefs</span>
           </span>
         </a>
 
@@ -54,20 +52,20 @@ export default function Navbar({ onCta }) {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <button
-            onClick={onCta}
+          <a
+            href="https://app.revenuechiefs.org/login"
             data-testid="navbar-explore-btn"
             className="px-4 py-2 text-sm font-medium text-[#1F1F2E] hover:text-[#8231D3] transition-colors"
           >
             Sign In
-          </button>
-          <button
-            onClick={onCta}
+          </a>
+          <a
+            href="https://app.revenuechiefs.org/register"
             data-testid="navbar-request-invite-btn"
-            className="btn-glow px-5 py-2.5 rounded-full bg-[#8231D3] text-white text-sm font-medium hover:bg-[#5F27CD] transition-colors"
+            className="btn-glow block px-5 py-2.5 rounded-full bg-[#8231D3] text-white text-sm font-medium hover:bg-[#5F27CD] transition-colors"
           >
             Request Invitation
-          </button>
+          </a>
         </div>
 
         <button
@@ -95,20 +93,21 @@ export default function Navbar({ onCta }) {
                 <a
                   key={l.href}
                   href={l.href}
-                  onClick={() => setOpen(false)}
+                  onClick={() => setTimeout(() => setOpen(false), 150)}
                   data-testid={`mobile-nav-link-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="px-4 py-3 rounded-xl text-[#1F1F2E] hover:bg-[#EDE7FF] hover:text-[#8231D3] transition-colors"
+                  className="block px-4 py-3 rounded-xl text-[#1F1F2E] hover:bg-[#EDE7FF] hover:text-[#8231D3] transition-colors"
                 >
                   {l.label}
                 </a>
               ))}
-              <button
-                onClick={() => { setOpen(false); onCta?.(); }}
+              <a
+                href="https://app.revenuechiefs.org/register"
+                onClick={() => setTimeout(() => setOpen(false), 150)}
                 data-testid="mobile-request-invite-btn"
-                className="mt-2 w-full px-5 py-3 rounded-full bg-[#8231D3] text-white font-medium hover:bg-[#5F27CD] transition-colors"
+                className="mt-2 block w-full text-center px-5 py-3 rounded-full bg-[#8231D3] text-white font-medium hover:bg-[#5F27CD] transition-colors"
               >
                 Request Invitation
-              </button>
+              </a>
             </div>
           </motion.div>
         )}

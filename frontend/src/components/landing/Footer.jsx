@@ -22,12 +22,10 @@ export default function Footer() {
         <div className="grid lg:grid-cols-12 gap-10">
           {/* Brand */}
           <div className="lg:col-span-4">
-            <a href="#top" className="flex items-center gap-2.5">
-              <span className="w-9 h-9 rounded-xl bg-[#8231D3] grid place-items-center text-white font-bold">
-                E
-              </span>
-              <span className="font-semibold text-[#1F1F2E] tracking-tight">
-                Executive Sales Network
+            <a href="#top" className="flex items-center gap-3">
+              <img src={require('../../assets/logo/logo.png')} alt="Revenue Chiefs Logo" className="h-12 w-auto object-contain mix-blend-multiply" />
+              <span className="font-bold text-2xl text-[#1F1F2E] tracking-tight">
+                Revenue Chiefs
               </span>
             </a>
             <p className="mt-5 text-sm text-[#6C6C80] leading-relaxed max-w-sm">
@@ -90,7 +88,7 @@ export default function Footer() {
 
         <div className="mt-14 pt-8 border-t border-[#ECECF5] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#6C6C80]">
-            © {new Date().getFullYear()} Executive Sales Leadership Network. All rights reserved.
+            © {new Date().getFullYear()} Revenue Chiefs. All rights reserved.
           </p>
           <p className="text-xs text-[#6C6C80]">
             Crafted for India's revenue leaders.
