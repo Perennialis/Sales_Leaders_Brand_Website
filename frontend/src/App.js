@@ -5,15 +5,13 @@ import { Toaster } from "sonner";
 
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
-import TrustedCompanies from "@/components/landing/TrustedCompanies";
-import WhyJoin from "@/components/landing/WhyJoin";
-import FeaturedLeaders from "@/components/landing/FeaturedLeaders";
-import PlatformFeatures from "@/components/landing/PlatformFeatures";
-import StatsSection from "@/components/landing/StatsSection";
-import Testimonials from "@/components/landing/Testimonials";
-import EventsShowcase from "@/components/landing/EventsShowcase";
-import MembershipPlans from "@/components/landing/MembershipPlans";
-import FinalCTA from "@/components/landing/FinalCTA";
+import WhyRevenueChiefs from "@/components/landing/WhyRevenueChiefs";
+import Journey from "@/components/landing/Journey";
+import VisualShowcase from "@/components/landing/VisualShowcase";
+import Vision from "@/components/landing/Vision";
+import Experience from "@/components/landing/Experience";
+import ComingSoon from "@/components/landing/ComingSoon";
+import JoinEarly from "@/components/landing/JoinEarly";
 import Footer from "@/components/landing/Footer";
 import RequestInviteDialog from "@/components/landing/RequestInviteDialog";
 
@@ -22,7 +20,6 @@ const Landing = () => {
 
   const openInvite   = () => setDialog({ open: true, mode: "invite" });
   const openApply    = () => setDialog({ open: true, mode: "apply" });
-  const openSchedule = () => setDialog({ open: true, mode: "schedule" });
 
   const scrollToPlatform = () => {
     document.querySelector("#platform")?.scrollIntoView({ behavior: "smooth" });
@@ -33,15 +30,13 @@ const Landing = () => {
       <Navbar onCta={openInvite} />
       <main>
         <Hero onPrimary={openInvite} onSecondary={scrollToPlatform} />
-        <TrustedCompanies />
-        <WhyJoin />
-        <FeaturedLeaders />
-        <PlatformFeatures />
-        <StatsSection />
-        <Testimonials />
-        <EventsShowcase onCta={openInvite} />
-        <MembershipPlans onCta={openApply} />
-        <FinalCTA onApply={openApply} onSchedule={openSchedule} />
+        <WhyRevenueChiefs />
+        <Journey />
+        <VisualShowcase />
+        <Vision />
+        <Experience />
+        <ComingSoon />
+        <JoinEarly onApply={openApply} />
       </main>
       <Footer />
 

@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "Why Join", href: "#why-join" },
-  { label: "Leaders", href: "#leaders" },
-  { label: "Platform", href: "#platform" },
-  { label: "Events", href: "#events" },
-  { label: "Membership", href: "#membership" },
+  { label: "About", href: "#about" },
+  { label: "Journey", href: "#journey" },
+  { label: "Vision", href: "#vision" },
+  { label: "Benefits", href: "#benefits" },
+  { label: "Initiatives", href: "#initiatives" },
 ];
 
 export default function Navbar({ onCta }) {
@@ -32,8 +32,8 @@ export default function Navbar({ onCta }) {
     >
       <nav className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
         <a href="#top" data-testid="logo-link" className="flex items-center gap-3 group">
-          <img src={require('../../assets/logo/logo.png')} alt="Revenue Chiefs Logo" className="h-12 w-auto object-contain mix-blend-multiply" />
-          <span className="font-bold text-2xl text-[#1F1F2E] tracking-tight hidden sm:block">
+          <img src="/logo.jpeg" alt="Revenue Chiefs Logo" className="h-10 w-auto object-contain rounded-md" />
+          <span className="font-bold text-2xl text-[#1F1F2E] tracking-tight group-hover:text-[#8231D3] transition-colors">
             Revenue <span className="text-[#8231D3]">Chiefs</span>
           </span>
         </a>
