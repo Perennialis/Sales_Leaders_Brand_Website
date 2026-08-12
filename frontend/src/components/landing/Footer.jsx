@@ -1,4 +1,5 @@
 import { Linkedin, Mail, Twitter, Youtube, Instagram, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // For Pinterest, since Lucide doesn't have a direct Pinterest icon, we can use a custom SVG or just use a fallback like Link icon if needed, but wait! We can render a custom SVG for Pinterest or use an existing similar icon.
 // Since we want to stick to lucide-react as much as possible, let's use a custom SVG for Pinterest to make it premium.
@@ -31,23 +32,25 @@ const COLS = [
   {
     title: "Explore",
     links: [
-      { label: "About Us", href: "#about" },
-      { label: "Your Journey", href: "#journey" },
-      { label: "Our Vision", href: "#vision" },
+      { label: "About Us", href: "/#about" },
+      { label: "Your Journey", href: "/#journey" },
+      { label: "Our Vision", href: "/#vision" },
     ],
   },
   {
     title: "Platform",
     links: [
-      { label: "Benefits", href: "#benefits" },
-      { label: "Initiatives", href: "#initiatives" },
+      { label: "Benefits", href: "/#benefits" },
+      { label: "Initiatives", href: "/#initiatives" },
     ],
   },
   {
     title: "Legal",
     links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms & Conditions", href: "/terms-and-conditions" },
+      { label: "Cancellation & Refund Policy", href: "/cancellation-and-refund-policy" },
+      { label: "Contact Us", href: "/contact-us" },
     ],
   },
 ];
@@ -62,12 +65,12 @@ export default function Footer() {
           
           {/* Brand & Contact */}
           <div className="lg:col-span-5">
-            <a href="#top" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <img src="/logo.jpeg" alt="Revenue Chiefs Logo" className="h-10 w-auto object-contain rounded-md" />
               <span className="font-bold text-2xl text-[#1F1F2E] tracking-tight">
                 Revenue Chiefs
               </span>
-            </a>
+            </Link>
             <p className="mt-5 text-sm text-[#6C6C80] leading-relaxed max-w-sm">
               The premier invite-only network for forward-thinking sales leaders. Connect, collaborate, and elevate your revenue career.
             </p>
@@ -77,10 +80,17 @@ export default function Footer() {
                 <Mail className="w-4 h-4" />
                 inforevenuechiefs@gmail.com
               </a>
-              <a href="tel:7795808055" className="inline-flex items-center gap-2 text-sm text-[#6C6C80] hover:text-[#8231D3] transition-colors">
-                <Phone className="w-4 h-4" />
-                7795808055
-              </a>
+              <div className="flex items-start gap-3 text-sm text-[#6C6C80]">
+                <Phone className="w-4 h-4 mt-0.5 shrink-0" />
+                <div className="flex flex-col gap-1.5">
+                  <a href="tel:+919884200044" className="hover:text-[#8231D3] transition-colors">
+                    +91 98842 00044
+                  </a>
+                  <a href="tel:+917996969996" className="hover:text-[#8231D3] transition-colors">
+                    +91 79969 69996
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div className="mt-8 flex items-center gap-3">
@@ -107,12 +117,21 @@ export default function Footer() {
               <ul className="mt-5 space-y-3">
                 {c.links.map((l) => (
                   <li key={l.label}>
-                    <a
-                      href={l.href}
-                      className="text-sm text-[#6C6C80] hover:text-[#8231D3] transition-colors"
-                    >
-                      {l.label}
-                    </a>
+                    {l.href.startsWith("/") && !l.href.includes("#") ? (
+                      <Link
+                        to={l.href}
+                        className="text-sm text-[#6C6C80] hover:text-[#8231D3] transition-colors"
+                      >
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={l.href}
+                        className="text-sm text-[#6C6C80] hover:text-[#8231D3] transition-colors"
+                      >
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
