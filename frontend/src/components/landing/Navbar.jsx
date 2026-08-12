@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Journey", href: "#journey" },
-  { label: "Vision", href: "#vision" },
-  { label: "Benefits", href: "#benefits" },
-  { label: "Initiatives", href: "#initiatives" },
+  { label: "About", href: "/#about" },
+  { label: "Journey", href: "/#journey" },
+  { label: "Vision", href: "/#vision" },
+  { label: "Benefits", href: "/#benefits" },
+  { label: "Initiatives", href: "/#initiatives" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Navbar({ onCta }) {
@@ -31,24 +33,35 @@ export default function Navbar({ onCta }) {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
-        <a href="#top" data-testid="logo-link" className="flex items-center gap-3 group">
+        <Link to="/" data-testid="logo-link" className="flex items-center gap-3 group">
           <img src="/logo.jpeg" alt="Revenue Chiefs Logo" className="h-10 w-auto object-contain rounded-md" />
           <span className="font-bold text-2xl text-[#1F1F2E] tracking-tight group-hover:text-[#8231D3] transition-colors">
             Revenue <span className="text-[#8231D3]">Chiefs</span>
           </span>
-        </a>
+        </Link>
 
         <div className="hidden lg:flex items-center gap-1">
-          {NAV_LINKS.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              data-testid={`nav-link-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
-              className="px-4 py-2 text-sm font-medium text-[#1F1F2E] hover:text-[#8231D3] transition-colors rounded-lg"
-            >
-              {l.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((l) =>
+            l.href.startsWith("/") && !l.href.includes("#") ? (
+              <Link
+                key={l.href}
+                to={l.href}
+                data-testid={`nav-link-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
+                className="px-4 py-2 text-sm font-medium text-[#1F1F2E] hover:text-[#8231D3] transition-colors rounded-lg"
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <a
+                key={l.href}
+                href={l.href}
+                data-testid={`nav-link-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
+                className="px-4 py-2 text-sm font-medium text-[#1F1F2E] hover:text-[#8231D3] transition-colors rounded-lg"
+              >
+                {l.label}
+              </a>
+            )
+          )}
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
@@ -89,17 +102,29 @@ export default function Navbar({ onCta }) {
             data-testid="mobile-menu"
           >
             <div className="px-5 py-4 flex flex-col gap-1">
-              {NAV_LINKS.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setTimeout(() => setOpen(false), 150)}
-                  data-testid={`mobile-nav-link-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="block px-4 py-3 rounded-xl text-[#1F1F2E] hover:bg-[#EDE7FF] hover:text-[#8231D3] transition-colors"
-                >
-                  {l.label}
-                </a>
-              ))}
+              {NAV_LINKS.map((l) =>
+                l.href.startsWith("/") && !l.href.includes("#") ? (
+                  <Link
+                    key={l.href}
+                    to={l.href}
+                    onClick={() => setTimeout(() => setOpen(false), 150)}
+                    data-testid={`mobile-nav-link-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
+                    className="block px-4 py-3 rounded-xl text-[#1F1F2E] hover:bg-[#EDE7FF] hover:text-[#8231D3] transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setTimeout(() => setOpen(false), 150)}
+                    data-testid={`mobile-nav-link-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
+                    className="block px-4 py-3 rounded-xl text-[#1F1F2E] hover:bg-[#EDE7FF] hover:text-[#8231D3] transition-colors"
+                  >
+                    {l.label}
+                  </a>
+                )
+              )}
               <a
                 href="https://app.revenuechiefs.org/register"
                 onClick={() => setTimeout(() => setOpen(false), 150)}

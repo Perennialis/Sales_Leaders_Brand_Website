@@ -15,6 +15,11 @@ import JoinEarly from "@/components/landing/JoinEarly";
 import Footer from "@/components/landing/Footer";
 import RequestInviteDialog from "@/components/landing/RequestInviteDialog";
 
+import TermsAndConditions from "@/pages/TermsAndConditions";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import CancellationRefundPolicy from "@/pages/CancellationRefundPolicy";
+import ContactUs from "@/pages/ContactUs";
+
 const Landing = () => {
   const [dialog, setDialog] = useState({ open: false, mode: "invite" });
 
@@ -66,6 +71,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cancellation-and-refund-policy" element={<CancellationRefundPolicy />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
     </div>
