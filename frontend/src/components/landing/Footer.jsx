@@ -50,6 +50,7 @@ const COLS = [
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms & Conditions", href: "/terms-and-conditions" },
       { label: "Cancellation & Refund Policy", href: "/cancellation-and-refund-policy" },
+      { label: "Shipping & Return Policy", href: "/shipping-and-return-policy" },
       { label: "Contact Us", href: "/contact-us" },
     ],
   },
