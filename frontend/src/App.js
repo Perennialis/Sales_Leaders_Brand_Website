@@ -19,6 +19,7 @@ import TermsAndConditions from "@/pages/TermsAndConditions";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import CancellationRefundPolicy from "@/pages/CancellationRefundPolicy";
 import ContactUs from "@/pages/ContactUs";
+import Pricing from "@/pages/Pricing";
 
 const Landing = () => {
   const [dialog, setDialog] = useState({ open: false, mode: "invite" });
@@ -75,6 +76,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/cancellation-and-refund-policy" element={<CancellationRefundPolicy />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/pricing" element={<Pricing />} />
         </Routes>
       </BrowserRouter>
     </div>
