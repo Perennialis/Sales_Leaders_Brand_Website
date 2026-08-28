@@ -42,7 +42,7 @@ export default function CancellationRefundPolicy() {
             <h2 className="text-lg font-semibold text-[#1F1F2E] mb-3 font-poppins">2. How to Request Cancellation</h2>
             <p>
               You can cancel your subscription by logging into your account dashboard, navigating to the "Billing & Plan" section, and selecting "Cancel Subscription". Alternatively, you can email us at{" "}
-              <a href="mailto:inforevenuechiefs@gmail.com" className="text-[#8231D3] hover:underline font-medium">inforevenuechiefs@gmail.com</a>{" "}
+              <a href="mailto:info@revenuechiefs.org" className="text-[#8231D3] hover:underline font-medium">info@revenuechiefs.org</a>{" "}
               with your account registration email and request a cancellation. Please send the request at least forty-eight (48) hours prior to your scheduled renewal date to ensure processing before the next charge.
             </p>
           </section>
@@ -100,8 +100,8 @@ export default function CancellationRefundPolicy() {
             <ul className="space-y-2.5 text-sm text-[#6C6C80]">
               <li>
                 <span className="font-medium text-[#1F1F2E]">Support Email:</span>{" "}
-                <a href="mailto:inforevenuechiefs@gmail.com" className="text-[#8231D3] hover:underline">
-                  inforevenuechiefs@gmail.com
+                <a href="mailto:info@revenuechiefs.org" className="text-[#8231D3] hover:underline">
+                  info@revenuechiefs.org
                 </a>
               </li>
               <li>

@@ -175,8 +175,8 @@ export default function TermsAndConditions() {
             <ul className="space-y-2.5 text-sm text-[#6C6C80]">
               <li>
                 <span className="font-medium text-[#1F1F2E]">Support Email:</span>{" "}
-                <a href="mailto:inforevenuechiefs@gmail.com" className="text-[#8231D3] hover:underline">
-                  inforevenuechiefs@gmail.com
+                <a href="mailto:info@revenuechiefs.org" className="text-[#8231D3] hover:underline">
+                  info@revenuechiefs.org
                 </a>
               </li>
               <li>
