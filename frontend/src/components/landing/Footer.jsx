@@ -76,9 +76,9 @@ export default function Footer() {
             </p>
             
             <div className="mt-8 space-y-3">
-              <a href="mailto:inforevenuechiefs@gmail.com" className="flex items-center gap-3 text-sm text-[#6C6C80] hover:text-[#8231D3] transition-colors">
+              <a href="mailto:info@revenuechiefs.org" className="flex items-center gap-3 text-sm text-[#6C6C80] hover:text-[#8231D3] transition-colors">
                 <Mail className="w-4 h-4" />
-                inforevenuechiefs@gmail.com
+                info@revenuechiefs.org
               </a>
               <div className="flex items-start gap-3 text-sm text-[#6C6C80]">
                 <Phone className="w-4 h-4 mt-0.5 shrink-0" />

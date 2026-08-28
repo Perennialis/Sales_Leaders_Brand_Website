@@ -86,8 +86,8 @@ export default function ContactUs() {
                 <div>
                   <h3 className="font-semibold text-[#1F1F2E] text-base font-poppins">Email Support</h3>
                   <p className="text-xs text-[#6C6C80] mt-1 leading-relaxed">For membership support and inquiries</p>
-                  <a href="mailto:inforevenuechiefs@gmail.com" className="text-sm font-semibold text-[#8231D3] hover:text-[#5F27CD] hover:underline block mt-2.5">
-                    inforevenuechiefs@gmail.com
+                  <a href="mailto:info@revenuechiefs.org" className="text-sm font-semibold text-[#8231D3] hover:text-[#5F27CD] hover:underline block mt-2.5">
+                    info@revenuechiefs.org
                   </a>
                 </div>
               </CardContent>
