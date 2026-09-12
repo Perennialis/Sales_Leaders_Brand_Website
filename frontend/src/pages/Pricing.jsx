@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Crown, Check } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 
 export default function Pricing() {
   const [billingCycle, setBillingCycle] = useState("Annual"); // "Monthly" or "Annual"
@@ -59,6 +60,11 @@ export default function Pricing() {
 
   return (
     <div data-testid="pricing-page" className="min-h-screen bg-[#F8F9FC] text-[#1F1F2E] font-poppins">
+      <SEO
+        title="Membership & Pricing"
+        description="Choose a plan built for sales leaders who take their craft seriously. Explore Revenue Chiefs membership tiers and exclusive benefits."
+        canonicalUrl="/pricing"
+      />
       <Navbar />
 
       {/* Header Section */}

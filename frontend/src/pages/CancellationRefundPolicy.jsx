@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 
 export default function CancellationRefundPolicy() {
   useEffect(() => {
@@ -9,6 +10,11 @@ export default function CancellationRefundPolicy() {
 
   return (
     <div data-testid="refund-page" className="min-h-screen bg-white text-[#1F1F2E]">
+      <SEO
+        title="Cancellation & Refund Policy"
+        description="Cancellation and refund policies for Revenue Chiefs memberships and services."
+        canonicalUrl="/cancellation-and-refund-policy"
+      />
       <Navbar />
 
       {/* Hero / Header Section */}
