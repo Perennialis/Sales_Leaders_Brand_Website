@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 
 export default function ShippingAndReturnPolicy() {
   useEffect(() => {
@@ -9,6 +10,11 @@ export default function ShippingAndReturnPolicy() {
 
   return (
     <div data-testid="shipping-page" className="min-h-screen bg-white text-[#1F1F2E]">
+      <SEO
+        title="Shipping & Return Policy"
+        description="Shipping and return guidelines for physical collateral, welcome kits, and materials from Revenue Chiefs."
+        canonicalUrl="/shipping-and-return-policy"
+      />
       <Navbar />
 
       {/* Hero / Header Section */}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Send, HelpCircle } from "lucide-react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -54,6 +55,11 @@ export default function ContactUs() {
 
   return (
     <div data-testid="contact-page" className="min-h-screen bg-white text-[#1F1F2E]">
+      <SEO
+        title="Contact Us"
+        description="Get in touch with the Revenue Chiefs team for membership inquiries, partnerships, or support."
+        canonicalUrl="/contact-us"
+      />
       <Navbar />
 
       {/* Hero / Header Section */}

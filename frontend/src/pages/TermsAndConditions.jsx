@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 
 export default function TermsAndConditions() {
   useEffect(() => {
@@ -8,7 +9,12 @@ export default function TermsAndConditions() {
   }, []);
 
   return (
-    <div data-testid="terms-page" className="min-h-screen bg-white text-[#1F1F2E]">
+    <div data-testid="terms-page" className="min-h-screen bg-[#FFFFFF] text-[#1F1F2E]">
+      <SEO
+        title="Terms and Conditions"
+        description="Terms and conditions governing membership, usage, and services of Revenue Chiefs."
+        canonicalUrl="/terms-and-conditions"
+      />
       <Navbar />
 
       {/* Hero / Header Section */}

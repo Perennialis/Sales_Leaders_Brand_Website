@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "sonner";
+import SEO from "@/components/SEO";
 
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
@@ -34,6 +36,19 @@ const Landing = () => {
 
   return (
     <div className="min-h-screen bg-white text-[#1F1F2E]" data-testid="landing-page">
+      <SEO
+        title="India's Premier Revenue Leaders Circle"
+        description="A private, invite-only community for India's CROs, VPs of Sales, Directors, and Founders driving revenue growth across enterprises."
+        canonicalUrl="/"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Revenue Chiefs",
+          "url": "https://revenuechiefs.org",
+          "logo": "https://revenuechiefs.org/logo.jpeg",
+          "description": "India's Premier Revenue Leaders Circle - Private, invite-only community for CROs, VPs of Sales, Directors, and Founders."
+        }}
+      />
       <Navbar onCta={openInvite} />
       <main>
         <Hero onPrimary={openInvite} onSecondary={scrollToPlatform} />
@@ -69,19 +84,21 @@ const Landing = () => {
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/cancellation-and-refund-policy" element={<CancellationRefundPolicy />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/shipping-and-return-policy" element={<ShippingAndReturnPolicy />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <HelmetProvider>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/cancellation-and-refund-policy" element={<CancellationRefundPolicy />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/shipping-and-return-policy" element={<ShippingAndReturnPolicy />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </HelmetProvider>
   );
 }
 

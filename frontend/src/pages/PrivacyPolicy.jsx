@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
+import SEO from "@/components/SEO";
 
 export default function PrivacyPolicy() {
   useEffect(() => {
@@ -9,6 +10,11 @@ export default function PrivacyPolicy() {
 
   return (
     <div data-testid="privacy-page" className="min-h-screen bg-white text-[#1F1F2E]">
+      <SEO
+        title="Privacy Policy"
+        description="Privacy policy outlining data collection, privacy practices, and protection for Revenue Chiefs members."
+        canonicalUrl="/privacy-policy"
+      />
       <Navbar />
 
       {/* Hero / Header Section */}
